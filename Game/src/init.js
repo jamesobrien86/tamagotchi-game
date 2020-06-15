@@ -4,7 +4,7 @@ import initButtons from "./buttons";
 
 async function init() {
   console.log("starting game");
-  initButtons(game.handleUserAction);
+  initButtons(gameState.handleUserAction);
 
   let nextTimeToTick = Date.now();
   function nextAnimationFrame() {
