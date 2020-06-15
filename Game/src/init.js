@@ -12,11 +12,11 @@ async function init() {
     const now = Date.now();
     if (nextTimeToTick <= now) {
       tick();
-      nextAnimationFrame = now + TICK_RATE;
+      nextTimeToTick = now + TICK_RATE;
     }
     requestAnimationFrame(nextAnimationFrame);
   }
 
-  nextAnimationFrame();
+  requestAnimationFrame(nextAnimationFrame);
 }
 init();
